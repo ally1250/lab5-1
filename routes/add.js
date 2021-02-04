@@ -8,7 +8,7 @@ exports.addFriend = function(request, response) {
 		description,
 	} = request.query;
 
-	// if (name.length > 0 && description.length > 0) {
+	if (name.length > 0 && description.length > 0) {
 		const newFriend = {
 			name,
 			description,
@@ -18,6 +18,6 @@ exports.addFriend = function(request, response) {
 		data.friends.push(newFriend);
 
 		response.render('index', data);
-	// }
+	}
 	// Your code goes here
 }
